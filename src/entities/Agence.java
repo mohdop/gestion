@@ -19,7 +19,7 @@ public class Agence {
     {
         nbr++;
         id=nbr;
-        numero="AG"+nbr;
+        numero="AG_"+nbr;
     }
 
     //surcharge d'insertion
