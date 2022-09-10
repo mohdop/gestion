@@ -1,16 +1,38 @@
 package entities;
 
-public class Compte {
-    protected static int nbr;
+import java.util.List;
+
+abstract public class Compte {
+    private static int nbr;
+    protected Client client;
+    protected Agence agence;
+   
     //id numero solde type
     protected int id;
     protected String numero;
     protected double solde;
-    protected String type;
+    protected Type_Compte typeCompte;
 
-    public Compte(double solde, String type) {
+
+
+    public Type_Compte getTypeCompte() {
+        return typeCompte;
+    }
+    public void setTypeCompte(Type_Compte typeCompte) {
+        this.typeCompte = typeCompte;
+    }
+    public Client getClient() {
+        return client;
+    }
+    public void setClient(Client client) {
+        this.client = client;
+    }
+    public Compte(double solde) {
+        nbr++;
+        id=nbr;
+        numero="CPT_"+nbr;
         this.solde = solde;
-        this.type = type;
+        
     }
     public Compte ()
     {
@@ -42,14 +64,11 @@ public class Compte {
     public void setSolde(double solde) {
         this.solde = solde;
     }
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
-    }
+    
     @Override
     public String toString() {
-        return "Compte [id=" + id + ", numero=" + numero + ", solde=" + solde + ", type=" + type + "]";
+        return "Compte [id=" + id + ", numero=" + numero + ", solde=" + solde + "]";
+    }
+    public void add(Compte compte) {
     }
 }

@@ -8,6 +8,14 @@ public class Agence {
     private String numero;
     private String adresse;
     private String tel;
+    private Agence agence;
+    public Agence getAgence() {
+        return agence;
+    }
+
+    public void setAgence(Agence agence) {
+        this.agence = agence;
+    }
 
     public Agence(String adresse, String tel) {
         this.adresse = adresse;

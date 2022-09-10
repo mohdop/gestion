@@ -6,10 +6,7 @@ public class Epargne extends Compte {
     public Epargne(Double taux) {
         this.taux = taux;
     }
-    public Epargne(double solde, String type) {
-        super(solde, type);
-        //TODO Auto-generated constructor stub
-    }
+    
     public Double getTaux() {
         return taux;
     }

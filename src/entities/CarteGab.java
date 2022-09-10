@@ -5,9 +5,21 @@ public class CarteGab {
     private int id;
     private String numero;
     private String dateExp;
+    private Cheque cheque;
     
+
+
+    public Cheque getCheque() {
+        return cheque;
+    }
+
+    public void setCheque(Cheque cheque) {
+        this.cheque = cheque;
+    }
+
     public CarteGab(String dateExp) {
         this.dateExp = dateExp;
+       
     }
 
     public CarteGab() {

@@ -1,16 +1,24 @@
 package entities;
 
+import java.util.List;
+
 public class Cheque extends  Compte{
 
-    private Double frais;
     
+    private List<CarteGab> carteGabs ;
+
+   
+    public List<CarteGab> getCarteGabs() {
+        return carteGabs;
+    }
+    public void setCarteGabs(List<CarteGab> carteGabs) {
+        this.carteGabs = carteGabs;
+    }
+    private Double frais;
     public Cheque(Double frais) {
         this.frais = frais;
     }
-    public Cheque(double solde, String type) {
-        super(solde, type);
-        //TODO Auto-generated constructor stub
-    }
+   
     @Override
     public String toString() {
         return "Cheque [frais=" + frais + "]";
